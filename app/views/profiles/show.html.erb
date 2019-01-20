@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= @profile.name %></h1>
+
+<p>
+  <%= @profile.bio %>
+</p>
+
+<h3>Kinks</h3>
+
+<%= render @profile.kinks %>
+<%= render "kinks/new", profile: @profile %>
+
+<%= link_to 'Edit', edit_profile_path(@profile) %> |
+<%= link_to 'Back', profiles_path %>
